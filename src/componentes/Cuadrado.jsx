@@ -2,9 +2,11 @@ import React from 'react'
 
 export default function Cuadrado(props) {
 
-  const color = props.on ? '#222222' : 'transparent'
+  const color = props.on ? '#333333' : 'transparent'
 
   return (
-    <div style={{ backgroundColor: color }} className="cuadrado"></div>
+    <div onClick={ () => props.toggle(props.id) } style={{ backgroundColor: color }} className="cuadrado">
+      <p>{props.id}</p>
+    </div>
   )
 }
