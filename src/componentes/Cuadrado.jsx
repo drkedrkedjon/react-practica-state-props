@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Cuadrado() {
+export default function Cuadrado(props) {
+
+  const color = props.on ? '#222222' : 'transparent'
+
   return (
-    <div className="cuadrado"></div>
+    <div style={{ backgroundColor: color }} className="cuadrado"></div>
   )
 }
